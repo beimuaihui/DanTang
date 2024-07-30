@@ -37,7 +37,7 @@ class YMCategoryViewController: YMBaseViewController, YMCategoryBottomViewDelega
         scrollView.contentSize = CGSize(width: SCREENW, height: bottomBGView.frame.maxY)
     }
     
-    func categoryRightBBClick() {
+    @objc func categoryRightBBClick() {
         let searchBarVC = YMSearchViewController()
         navigationController?.pushViewController(searchBarVC, animated: true)
     }

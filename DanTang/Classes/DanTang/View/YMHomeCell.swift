@@ -29,7 +29,7 @@ class YMHomeCell: UITableViewCell {
     var homeItem: YMHomeItem? {
         didSet {
             let url = homeItem!.cover_image_url
-            bgImageView.kf.setImage(with: URL(string: url!)!, placeholder: nil, options: nil, progressBlock: nil) { (image, error, cacheType, imageURL) in
+            bgImageView.kf.setImage(with: URL(string: url!)!, placeholder: nil, options: nil, progressBlock: nil) { (image) in
                 self.placeholderBtn.isHidden = true
             }
             titleLabel.text = homeItem!.title

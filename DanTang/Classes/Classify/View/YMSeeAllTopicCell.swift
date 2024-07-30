@@ -14,7 +14,7 @@ class YMSeeAllTopicCell: UITableViewCell {
     var collection: YMCollection? {
         didSet {
             let url = collection!.cover_image_url
-            bgImageView.kf.setImage(with: URL(string: url!)!, placeholder: nil, options: nil, progressBlock: nil) { (image, error, cacheType, imageURL) in
+            bgImageView.kf.setImage(with: URL(string: url!)!, placeholder: nil, options: nil, progressBlock: nil) { (image) in
                 self.placeholderButton.isHidden = true
             }
             titleLabel.text = collection!.title

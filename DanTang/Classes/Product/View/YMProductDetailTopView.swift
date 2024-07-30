@@ -122,7 +122,7 @@ class YMProductDetailTopView: UIView, UICollectionViewDelegate, UICollectionView
     func collectionView(_ cellForItemAtcollectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: detailCollectionViewCellID, for: indexPath as IndexPath) as! YMDetailCollectionViewCell
         let url = imageURLs[indexPath.item]
-        cell.bgImageView.kf.setImage(with: URL(string: url)!, placeholder: nil, options: nil, progressBlock: nil) { (image, error, cacheType, imageURL) in
+        cell.bgImageView.kf.setImage(with: URL(string: url)!, placeholder: nil, options: nil, progressBlock: nil) { (image) in
             cell.placeholderButton.isHidden = true
         }
         return cell

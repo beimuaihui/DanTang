@@ -113,14 +113,14 @@ class YMDanTangViewController: YMBaseViewController, UIScrollViewDelegate {
     }
     
     /// 箭头按钮点击
-    func arrowButtonClick(button: UIButton) {
+    @objc func arrowButtonClick(button: UIButton) {
         UIView.animate(withDuration: kAnimationDuration) { 
             button.imageView?.transform = button.imageView!.transform.rotated(by: CGFloat(M_PI))
         }
     }
     
     /// 标签上的按钮点击
-    func titlesClick(button: UIButton) {
+    @objc func titlesClick(button: UIButton) {
         // 修改按钮状态
         selectedButton!.isEnabled = true
         button.isEnabled = false
@@ -158,7 +158,7 @@ class YMDanTangViewController: YMBaseViewController, UIScrollViewDelegate {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "Feed_SearchBtn_18x18_"), style: .plain, target: self, action: #selector(dantangRightBBClick))
     }
 
-    func dantangRightBBClick() {
+    @objc func dantangRightBBClick() {
         let searchBarVC = YMSearchViewController()
         navigationController?.pushViewController(searchBarVC, animated: true)
     }

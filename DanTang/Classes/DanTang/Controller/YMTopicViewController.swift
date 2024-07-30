@@ -33,7 +33,7 @@ class YMTopicViewController: UITableViewController, YMHomeCellDelegate {
         }
     }
     
-    func loadHomeData() {
+    @objc func loadHomeData() {
         // 获取首页数据
         weak var weakSelf = self
         YMNetworkTool.shareNetworkTool.loadHomeInfo(id: type) { (homeItems) in

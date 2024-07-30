@@ -119,7 +119,7 @@ class YMNetworkTool: NSObject {
     /// 根据搜索条件进行搜索
     func loadSearchResult(keyword: String, sort: String, finished:@escaping (_ results: [YMSearchResult]) -> ()) {
         SVProgressHUD.show(withStatus: "正在加载...")
-        let url = "http://api.dantangapp.com/v1/search/item"
+        let url = "https://api.dantangapp.com/v1/search/item"
         
         let params = ["keyword": keyword,
                       "limit": 20,

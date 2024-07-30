@@ -20,7 +20,7 @@ class YMCollectionViewCell: UICollectionViewCell {
     var result: YMSearchResult? {
         didSet {
             let url = result!.cover_image_url!
-            productImageView.kf.setImage(with: URL(string: url)!, placeholder: nil, options: nil, progressBlock: nil) { (image, error, cacheType, imageURL) in
+            productImageView.kf.setImage(with: URL(string: url)!, placeholder: nil, options: nil, progressBlock: nil) { (image) in
                 self.placeholderBtn.isHidden = true
             }
             likeButton.setTitle(" " + String(result!.favorites_count!) + " ", for: .normal)
@@ -33,7 +33,7 @@ class YMCollectionViewCell: UICollectionViewCell {
     var product: YMProduct? {
         didSet {
             let url = product!.cover_image_url!
-            productImageView.kf.setImage(with: URL(string: url)!, placeholder: nil, options: nil, progressBlock: nil) { (image, error, cacheType, imageURL) in
+            productImageView.kf.setImage(with: URL(string: url)!, placeholder: nil, options: nil, progressBlock: nil) { (image) in
                 self.placeholderBtn.isHidden = true
             }
             likeButton.setTitle(" " + String(product!.favorites_count!) + " ", for: .normal)

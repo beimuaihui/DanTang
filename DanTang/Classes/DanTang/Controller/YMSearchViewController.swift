@@ -57,7 +57,7 @@ class YMSearchViewController: YMBaseViewController, UISearchBarDelegate, UIColle
     }
     
     /// 搜索条件点击
-    func sortButtonClick() {
+    @objc func sortButtonClick() {
         popView.show()
     }
     
@@ -68,7 +68,7 @@ class YMSearchViewController: YMBaseViewController, UISearchBarDelegate, UIColle
     }()
     
     /// 返回按钮、取消按钮点击
-    func navigationBackClick() {
+    @objc func navigationBackClick() {
         navigationController?.popViewController(animated: true)
     }
     

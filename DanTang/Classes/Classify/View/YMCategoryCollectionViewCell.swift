@@ -16,7 +16,7 @@ class YMCategoryCollectionViewCell: UICollectionViewCell {
     var collection: YMCollection? {
         didSet {
             let url = collection!.banner_image_url
-            collectionImageView.kf.setImage(with: URL(string: url!), placeholder: nil, options: nil, progressBlock: nil) { (image, error, cacheType, imageURL) in
+            collectionImageView.kf.setImage(with: URL(string: url!), placeholder: nil, options: nil, progressBlock: nil) { (image) in
                 self.placeholderButton.isHidden = true
             }
         }
